@@ -3,7 +3,6 @@ jdk:
   - openjdk6
 before_script: openssl rsautl -decrypt -inkey ~/.ssh/id_rsa -in private.enc -out private
 script:
-  - mkdir target
   - cd target
   - git clone https://github.com/lukewpatterson/_fork_github_maven-plugins.git
   - cd _fork_github_maven-plugins
