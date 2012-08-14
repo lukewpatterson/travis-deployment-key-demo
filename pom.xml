@@ -33,7 +33,7 @@
         <configuration>
           <description>${project.version} release of ${project.name}</description>
           <includes>
-            <include>repo</include>
+            <include>repo/**</include>
           </includes>
           <override>true</override>
           <includeAttached>false</includeAttached>
