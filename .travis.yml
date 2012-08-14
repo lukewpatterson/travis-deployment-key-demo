@@ -13,4 +13,4 @@ script:
   - mvn clean install -Dmaven.test.skip=true
   - cd ../../..
   - source private
-  - mvn clean install ghDownloads:upload -Dgithub.global.userName=$github_global_userName -Dgithub.global.password=$github_global_password
+  - mvn clean deploy ghDownloads:upload -Dgithub.global.userName=$github_global_userName -Dgithub.global.password=$github_global_password
