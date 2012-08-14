@@ -12,6 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <altDeploymentRepository>local_repo::default::file://${project.build.directory}/repo</altDeploymentRepository>
   </properties>
 
   <dependencies>
@@ -28,11 +29,14 @@
       <plugin>
         <groupId>com.github.github</groupId>
         <artifactId>downloads-maven-plugin</artifactId>
-        <version>0.5</version>
+        <version>0.7-SNAPSHOT</version>
         <configuration>
           <description>${project.version} release of ${project.name}</description>
+          <includes>
+            <include>repo</include>
+          </includes>
           <override>true</override>
-          <includeAttached>true</includeAttached>
+          <includeAttached>false</includeAttached>
         </configuration>
       </plugin>
     </plugins>

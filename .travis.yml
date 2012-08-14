@@ -3,5 +3,15 @@ jdk:
   - openjdk6
 before_script: openssl rsautl -decrypt -inkey ~/.ssh/id_rsa -in private.enc -out private
 script:
+  - mkdir target
+  - cd target
+  - git clone https://github.com/lukewpatterson/_fork_github_maven-plugins.git
+  - cd _fork_github_maven-plugins
+  - cd github-core
+  - mvn clean install -Dmaven.test.skip=true
+  - cd ..
+  - cd github-downloads-plugin
+  - mvn clean install -Dmaven.test.skip=true
+  - cd ../..
   - source private
   - mvn clean install ghDownloads:upload -Dgithub.global.userName=$github_global_userName -Dgithub.global.password=$github_global_password
