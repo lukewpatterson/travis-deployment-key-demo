@@ -10,4 +10,4 @@ script:
   - git add .
   - git commit -m "deploy repo"
   - git remote add origin https://github.com/lukewpatterson/travis-deployment-key-demo.wiki.git
-  - git push -u origin master
+  - git push --force origin
