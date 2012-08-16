@@ -40,6 +40,7 @@
           <outputDirectory>${project.build.directory}/repo</outputDirectory>
           <path>repo</path>
           <message>deployment of repo</message>
+          <dryRun>true</dryRun>
         </configuration>
       </plugin>
     </plugins>
