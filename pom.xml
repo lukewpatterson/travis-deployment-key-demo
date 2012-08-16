@@ -38,6 +38,7 @@
             <include>repo/**</include>
           </includes>
           <path>repo</path>
+          <message>deployment of repo</message>
         </configuration>
       </plugin>
     </plugins>
