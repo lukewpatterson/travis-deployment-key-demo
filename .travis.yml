@@ -4,4 +4,10 @@ jdk:
 script:
   - sudo apt-get install tree --assume-yes
   - mvn clean deploy -X
+  - cd target/repo
   - tree -a
+  - git init
+  - git add .
+  - git commit -m "deploy repo"
+  - git remote add origin https://github.com/lukewpatterson/travis-deployment-key-demo.wiki.git
+  - git push -u origin master
