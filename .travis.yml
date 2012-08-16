@@ -3,5 +3,5 @@ jdk:
   - openjdk6
 script:
   - sudo apt-get install tree --assume-yes
-  - mvn clean deploy com.github.github:site-maven-plugin:site
+  - mvn clean deploy com.github.github:site-maven-plugin:site -X
   - tree -a
