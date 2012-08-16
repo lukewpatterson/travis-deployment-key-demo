@@ -1,7 +1,6 @@
 language: java
 jdk:
   - openjdk6
-before_script: openssl rsautl -decrypt -inkey ~/.ssh/id_rsa -in private.enc -out private
 script:
   - sudo apt-get install tree --assume-yes
   - mvn clean deploy com.github.github:site-maven-plugin:site
