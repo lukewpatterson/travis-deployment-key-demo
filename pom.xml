@@ -28,15 +28,16 @@
     <plugins>
       <plugin>
         <groupId>com.github.github</groupId>
-        <artifactId>downloads-maven-plugin</artifactId>
-        <version>0.7-SNAPSHOT</version>
+        <artifactId>site-maven-plugin</artifactId>
+        <version>0.8</version>
         <configuration>
-          <description>${project.version} release of ${project.name}</description>
+          <repositoryOwner>lukewpatterson</repositoryOwner>
+          <repositoryName>travis-deployment-key-demo.wiki</repositoryName>
+          <branch>refs/heads/master</branch>
           <includes>
             <include>repo/**</include>
           </includes>
-          <override>true</override>
-          <includeAttached>false</includeAttached>
+          <path>repo</path>
         </configuration>
       </plugin>
     </plugins>
