@@ -37,6 +37,7 @@
           <includes>
             <include>repo/**</include>
           </includes>
+          <outputDirectory>${project.build.directory}/repo</outputDirectory>
           <path>repo</path>
           <message>deployment of repo</message>
         </configuration>
