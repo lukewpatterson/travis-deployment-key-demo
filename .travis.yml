@@ -5,10 +5,10 @@ script:
   - sudo apt-get install tree --assume-yes
   - mvn clean deploy -X
   - cd target
-  - git clone https://github.com/lukewpatterson/travis-deployment-key-demo.wiki.git
+  - git clone git@github.com:lukewpatterson/travis-deployment-key-demo.wiki.git
   - cd travis-deployment-key-demo.wiki
   - touch newfile.md
   - git add newfile.md
   - git commit -m 'test'
-  - git push
   - tree -a
+  - git push
