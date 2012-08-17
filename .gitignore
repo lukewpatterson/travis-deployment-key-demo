@@ -1,4 +1,4 @@
 target
 /id_travis*
-private
-target
+/target
+/config.xml
