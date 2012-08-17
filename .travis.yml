@@ -4,6 +4,9 @@ jdk:
 script:
   - sudo apt-get install tree --assume-yes
   - mvn clean deploy -X
+  - secret=`openssl rsautl -decrypt -inkey ~/.ssh/id_rsa -in secret`
+  - openssl aes-256-cbc -k "$secret" -in config.xml.enc -d -a -out config.xml
+  - cat config.xml
   - cd target/repo
   - git init
   - git add .
